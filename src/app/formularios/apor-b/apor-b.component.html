@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Números</title>
+</head>
+<body>
+
+  <div class="container mt-5" style="max-width: 420px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h2 class="text-center mb-4" style="color: #4a4a4a;">Calculadora</h2>
+
+    <div class="card mb-4 shadow-sm" style="border-radius: 12px;">
+      <div class="card-body">
+        <form [formGroup]="formulario" (ngSubmit)="numeros()">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Número A</label>
+            <input formControlName="a" type="number" class="form-control rounded-pill" placeholder="Ingrese A" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Número B</label>
+            <input formControlName="b" type="number" class="form-control rounded-pill" placeholder="Ingrese B" />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 rounded-pill" style="background-color: #003cff; border: none; box-shadow: 0 2px 6px rgba(124, 154, 237, 0.5);">
+          Calcular
+        </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="border-radius: 12px; background-color: #f9faff;">
+      <div class="card-body text-center" style="min-height: 80px;">
+        <h3 class="mb-0" style="color: #003cff;"> {{ resultado }}</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

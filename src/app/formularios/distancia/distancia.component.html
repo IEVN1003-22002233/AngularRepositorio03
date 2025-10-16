@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calcular Distancia</title>
+  <link
+  />
+</head>
+<body>
+
+  <div class="container mt-5" style="max-width: 420px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h2 class="text-center mb-4" style="color: #4a4a4a;">Calcular Distancia</h2>
+
+    <div class="card mb-4 shadow-sm" style="border-radius: 12px;">
+      <div class="card-body">
+        <form [formGroup]="formulario" (ngSubmit)="multNumeros()">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">X1</label>
+            <input formControlName="x1" type="number" class="form-control rounded-pill" placeholder="Coordenada X1" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Y1</label>
+            <input formControlName="y1" type="number" class="form-control rounded-pill" placeholder="Coordenada Y1" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">X2</label>
+            <input formControlName="x2" type="number" class="form-control rounded-pill" placeholder="Coordenada X2" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Y2</label>
+            <input formControlName="y2" type="number" class="form-control rounded-pill" placeholder="Coordenada Y2" />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 rounded-pill" style="background-color: #d202ee; border: none; box-shadow: 0 2px 6px rgba(124, 154, 237, 0.5);">
+          Calcular
+        </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="border-radius: 12px; background-color: #f9faff;">
+      <div class="card-body text-center" style="min-height: 80px;">
+        <h3 class="mb-0" style="color: #d202ee;"> {{ resultado }}</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
